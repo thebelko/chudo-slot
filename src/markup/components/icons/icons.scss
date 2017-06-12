@@ -1,0 +1,23 @@
+.icons {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &_vk {
+        @include bg($icon-vk);
+    }
+
+    &_od {
+        @include bg($icon-od);
+    }
+
+    &_tw {
+        @include bg($icon-tw);
+    }
+
+    &_fb {
+        @include bg($icon-fb);
+    }
+
+}

@@ -1,0 +1,43 @@
+.footer {
+    position: relative;
+    margin-top: 40px;
+    padding-bottom: 20px;
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        @include sprite-mixin-template($footer-shadow);
+        z-index: 10;
+    }
+    &__pay-wrap {
+        margin-bottom: 35px;
+    }
+    &__content {
+        @include clearfix;
+    }
+    &__left {
+        float: left;
+    }
+    &__right {
+        float: right;
+        position: relative;
+        z-index: 20;
+    }
+    &__chudo-slot {
+        color: #5c5b70;
+        font-family: $opensans;
+        font-size: 13px;
+    }
+    &__link {
+        display: inline-block;
+        margin-left: 40px;
+        text-decoration: none;
+        color: #5c5b70;
+        text-transform: uppercase;
+        font-family: $opensans;
+        font-size: 13px;
+    }
+}

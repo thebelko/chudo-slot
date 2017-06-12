@@ -1,0 +1,46 @@
+.slider {
+    border-radius: 5px;
+    &__item {
+
+    }
+    &__img {
+        display: none;
+        border-radius: 6px;
+    }
+    &__item:first-child {
+        img {
+            display: block;
+        }
+    }
+}
+
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+
+.slick-dots {
+    bottom: 15px;
+}
+
+.slick-dots li {
+    width: 10px;
+}
+
+.slick-dots li button::before {
+    display: none;
+}
+
+.slick-dots li button {
+    display: inline-block;
+    padding: 0;
+    border: 3px solid #000;
+    background: #000;
+    opacity: 1;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.slick-dots li.slick-active button {
+    background: #f2d035;
+}

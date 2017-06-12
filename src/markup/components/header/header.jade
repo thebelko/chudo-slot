@@ -1,0 +1,42 @@
+include ../icons/icons
+
+mixin header(data)
+    +b.HEADER.header()&attributes(attributes)
+        block
+        .container
+            +e.top
+                +e.A(href="index.html").logo
+                    +e.IMG.logo-img(src="static/img/content/logo.png")
+                +e.content
+                    +e.DIV.register-wrap
+                        +e.register
+                            +e.register-inner
+                                +e.A.reg-btn(href="#") Регистрация
+                                +e.SPAN 15 секунд
+                            +e.A.enter(href="#") Вход
+                        +b.socials
+                            +e.title Войти через:
+                            +e.A(href="#").item
+                                +icons._vk
+                            +e.A(href="#").item
+                                +icons._od
+                            +e.A(href="#").item
+                                +icons._tw
+                            +e.A(href="#").item
+                                +icons._fb
+
+                    +e.DIV
+                        +b.NAV.top-menu
+                            +e.UL
+                                +e.item_active
+                                    a(href="#")  Игры
+                                +e.item
+                                    a(href="#")  Акции
+                                +e.item
+                                    a(href="#")  Лотереи
+                                +e.item
+                                    a(href="#")  Туринири
+                                +e.item
+                                    a(href="#")  Vip-уровни
+
+

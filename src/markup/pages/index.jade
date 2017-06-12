@@ -1,0 +1,124 @@
+extends ../layouts/default
+
+include ../components/slider/slider
+include ../components/vitrina-item/vitrina-item
+
+block head
+    -pageSettings.title = 'Главная';
+
+block content
+    .container
+        .slider-block
+            .slider-wrap
+                +slider()
+                    +e.slider
+                        +e.item
+                            +e.IMG.img(src="static/img/content/banner-img.jpg")
+                        +e.item
+                            +e.IMG.img(src="static/img/content/banner-img.jpg")
+                        +e.item
+                            +e.IMG.img(src="static/img/content/banner-img.jpg")
+                        +e.item
+                            +e.IMG.img(src="static/img/content/banner-img.jpg")
+
+
+            +b.banner
+                +e.counter-wrap
+                    +e(id="js-count").counter 1000000
+                +e.btn-wrap
+                    +e.A(href="#").link Перейти
+
+
+        +b.small-promo
+            - for(var i = 0; i < 4; i++)
+                a(href="#")
+                    +e.item
+                        +e.item-left
+                            +e.IMG.img(src="static/img/content/small-prono-img.jpg")
+                        +e.item-right
+                            +e.name Boom Brothers
+                            +e.inner
+                                +e.money 500.00 RUB
+                                +e.time 13:03:08
+                            +e.user
+                                SPAN
+                                    != jadeHelpers.Icon.call(locals, {iconName: 'user', className: 'small-promo__user-icon'})
+                                SPAN ruslan2292
+
+
+        +b.game-nav
+            +e.left
+                +e.A(href="#").item_active Популярные
+                +e.A(href="#").item Слоты
+                +e.A(href="#").item Джекпоты
+                +e.A(href="#").item Настольные
+                +e.A(href="#").item Избранные
+
+            +e.right
+                FORM(action="/echo" method="post")
+                    INPUT(type="search" placeholder="Поиск игры")
+
+        +b.main-content
+            +e.left
+                +b.vitrina-wrap
+                    - for(var i = 0; i < 9; i++)
+                        +vitrina-item()
+                div(id="more-slots").vitrina-wrap.vitrina-wrap_more
+                    - for(var i = 0; i < 9; i++)
+                        +vitrina-item()
+                +b.load-more
+                    A(href="#" id="show-more") Еще игры
+                +b.seo-text
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+            +e.right
+                +b.sidebar
+                    +e.title Пляжный сезон
+                    +e.img-wrap
+                        +e.IMG.img(src="static/img/content/img-sidebar.jpg")
+                        +e.counter
+                            +e.counter-title <span>Осталось:&nbsp;</span>
+
+                            +e.counter-numbers <span class="afss_day_bv">0</span> дeнь&nbsp;<span class="afss_hours_bv">00</span>&nbsp;ч&nbsp; <span class="afss_mins_bv">00</span>&nbsp;м&nbsp; <span class="afss_secs_bv">00&nbsp;</span>&nbsp;с
+                    +e.list
+                        +e.item_title
+                            +e.item-count_title №
+                            +e.item-text_title Победитель
+                            +e.item-sum_title Приз
+                        +e.item_top
+                            +e.item-count_top 1
+                            +e.item-text_top gudik2016
+                            +e.item-sum_top 150.000
+                        +e.item_top
+                            +e.item-count_top 2
+                            +e.item-text_top gudik2016
+                            +e.item-sum_top 150.000
+                        +e.item_top
+                            +e.item-count_top 3
+                            +e.item-text_top gudik2016
+                            +e.item-sum_top 150.000
+                        +e.item
+                            +e.item-count 4
+                            +e.item-text gudik2016
+                            +e.item-sum 150.000
+                        +e.item
+                            +e.item-count 5
+                            +e.item-text gudik2016
+                            +e.item-sum 150.000
+                        +e.item
+                            +e.item-count 6
+                            +e.item-text gudik2016
+                            +e.item-sum 150.000
+                        +e.item
+                            +e.item-count 7
+                            +e.item-text gudik2016
+                            +e.item-sum 150.000
+                        +e.btn-wrap
+                            +e.A(href="#").link Подробнее о турнире
+
+
+
+
+
+

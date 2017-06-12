@@ -1,0 +1,88 @@
+.vitrina-item {
+    display: inline-block;
+    width: 210px;
+    margin-bottom: 18px;
+    margin-right: 16px;
+    &:nth-child(3n) {
+        margin-right: 0;
+    }
+    &:hover {
+        .vitrina-item__links-wrap {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+    &__top-wrap {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 8px;
+        height: 135px;
+        width: 210px;
+        overflow: hidden;
+        box-shadow: 0 34px 57px -16px #000;
+    }
+    &__img {
+        display: block;
+        border-radius: 6px;
+    }
+    &__links-wrap {
+        position: absolute;
+        top: 0px;
+        width: 210px;
+        height: 135px;
+        padding-top: 20px;
+        line-height: 42px;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        transform: translate3d(0px, -130px, 0px);
+        background-color: rgba(0, 0, 0, .4);
+        text-transform: uppercase;
+        transition: all 0.2s ease 0s;
+    }
+    &__link-play, &__link-demo {
+        display: inline-block;
+        color: #fff;
+        text-decoration: none;
+        font-family: $opensans;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-shadow: 1px 1px #000;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &__link-play {
+        @include bg($link-play-bg);
+    }
+    &__link-demo {
+        @include bg($link-demo-bg);
+    }
+    &__bottom-wrap {
+        position: relative;
+        z-index: 50;
+        @include clearfix;
+    }
+    &__game-name {
+        float: left;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #fff;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &__number {
+        float: right;
+        position: relative;
+        padding-left: 22px;
+        color: #5c5b70;
+        &::before {
+            content: '';
+            display: inline-block;
+            @include sprite-mixin-template($icon-user-like);
+            position: absolute;
+            left: 0;
+            top: 4px;
+        }
+    }
+}

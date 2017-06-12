@@ -1,0 +1,17 @@
+include ../../node_modules/bemto.jade/bemto
+
+include ../components/header/header
+include ../components/footer/footer
+
+doctype html
+html(lang='ru')
+    include ../components/head/head
+
+    body
+        +header()
+        
+        block content
+        
+        +footer()
+
+        script(src='%=static=%js/main%=hash=%%=min=%.js')

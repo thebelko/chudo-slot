@@ -1,0 +1,7 @@
+@include font-face('Open Sans', '../fonts/OpenSansRegular', 400, $exts: woff woff2 ttf eot);
+@include font-face('Open Sans', '../fonts/OpenSansBold', 700, $exts: woff woff2 ttf eot);
+
+@include font-face('Ubuntu', '../fonts/UbuntuRegular', 400, $exts: woff woff2 ttf eot);
+@include font-face('Ubuntu', '../fonts/UbuntuBold', 700, $exts: woff woff2 ttf eot);
+
+@include font-face('Myriad Pro', '../fonts/MyriadPro-Regular', 400, $exts: woff woff2 ttf eot);
